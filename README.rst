@@ -1,6 +1,16 @@
-**What is Hackblogs?**
-Hackblogs is DVCS based blog system. It's in early development stage.
+What is Hackblogs?
+==================
+
+Hackblogs is DVCS based blog system for hackers. 
+A little explanation of the above sentence:
+
+# DVCS - your blog posts will be on Github/Bitbucket. You do not communicate with/use anything but git/hg and Github/Bitbucket
+# blog system - your blog is hosted statically (meaning HTML and CSS files) on our server
+# for hackers - you will write posts in rST, Markdown and similar formats, and will use DVCS to publish them so it's expected of you to find your way around with this tools
+
+
 Basically, it works like this:
+------------------------------
 
 1. Create repository on Github/Bitbucket that will host your blog posts
    - for now, repository needs to be public, in future we will also support private repos
@@ -11,4 +21,6 @@ Basically, it works like this:
 4. Go to your_username.hackblo.gs to see you blog.
    - Hackblogs is intended to be used as a service, which means you blog will be hosted on our server
 
+
+Project is still in  early development stage.
 Some info on www.hackblo.gs
