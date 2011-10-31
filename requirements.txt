@@ -1,0 +1,4 @@
+nose
+rednose
+fabric
+requests
