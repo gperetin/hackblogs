@@ -2,3 +2,5 @@ nose
 rednose
 fabric
 requests
+mock
+gunicorn
