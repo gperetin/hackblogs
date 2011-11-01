@@ -1,12 +1,17 @@
+import sys
 import json
 
 class RequestParser(object):
     def __init__(self, env):
         self.env = env
-        self.request_body_json = env['wsgi.input'].read()
-        self.request_content = json.loads(self.request_body_json[8:])
 
     def parse(self):
+        try:
+            self.request_body_json = self.env['wsgi.input'].read()
+            self.request_content = json.loads(self.request_body_json[8:])
+        except:
+            return None
+
         request = Request()
         request.modified_files = self._extract_modified_files()
         return request

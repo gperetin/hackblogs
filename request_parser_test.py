@@ -8,6 +8,13 @@ class RequestParserTest(unittest.TestCase):
         self.env = {}
         self.env['wsgi.input'] = Mock()
 
+    def test_ignores_requests_without_json_payload(self):
+        self.env = 'some_text'
+        self.request_parser = RequestParser(self.env)
+        self.request = self.request_parser.parse()
+
+        self.assertEquals(self.request, None)
+
     def test_detects_modified_files_in_single_commit(self):
         self.env['wsgi.input'].read.return_value = simple_payload
         self.request_parser = RequestParser(self.env)
