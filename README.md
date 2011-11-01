@@ -1,6 +1,6 @@
 # What is Hackblogs?
 
-Hackblogs is DVCS based blog system for hackers.   
+Hackblogs is **DVCS based blog system for hackers**.   
 A little explanation of the above sentence:
 
 1. DVCS - your blog posts will be on Github/Bitbucket. You do not communicate
@@ -12,7 +12,7 @@ A little explanation of the above sentence:
     way around with this tools
 
 
-### Basically, it works like this:
+### It works like this:
 
 1. Create repository on Github/Bitbucket that will host your blog posts
    - for now, repository needs to be public, in future we will also support
@@ -35,7 +35,7 @@ System has 2 main components:
 1. Request listener
 2. Request processor
 
-They communicate over Celery queue, first component puts requests for
+They communicate over Celery queue; first component puts requests for
 processing in queue, second component pulls and processes them.
 
 #### 1. Request listener
@@ -55,7 +55,7 @@ This component pulls Request objects from queue and processes them.
 2. Extract modified, added and deleted filenames from Request
 3. Pull modified and added files from DVCS
 4. Do any conversions (rST to HTML, Markdown to HTML...) on modified and added
-files if necesarry
+files if necessary
 5. Publih modified and added files (copy to folder from where nginx will serve
 them)
 6. Remove deleted files
